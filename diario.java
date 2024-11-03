@@ -45,8 +45,10 @@ class diarioPersonal {
 
     public void mostrarDiario() {
         System.out.println("Entradas del Diario:");
-        for (informacionDiarioFecha entrada : diarioFecha) {
-            System.out.println("- " + entrada);
+        for (informacionDiarioFecha entradaPorFecha : diarioFecha) {
+            for (informacionDiarioContenido entradaPorContenido : diarioContenido) {
+                System.out.println("- " + entradaPorFecha + entradaPorContenido)
+            };
         }
     }
 }
