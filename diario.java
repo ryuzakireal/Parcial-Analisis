@@ -31,6 +31,14 @@ class diarioPersonal {
             System.out.println("- " + entrada);
         }
     }
+
+    public void mostrarUltimasEntradas(int cantidad) {
+        System.out.println("Ultimas " + cantidad + " entradas:");
+        int inicio = Math.max(diario.size() - cantidad, 0);
+        for (int i = diario.size() - 1; i >= inicio; i--) { 
+            System.out.println("- " + diario.get(i));
+        }
+    }
 }
 
 public class MainDiario {
