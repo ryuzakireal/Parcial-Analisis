@@ -51,7 +51,7 @@ class diarioPersonal {
     }
 }
 
-public class MainDiario {
+public class diario {
     public static void main(String[] args) {
         diarioPersonal diario = new diarioPersonal();
         diario.agregarEntradaContenido("Hoy fue un buen dia.");
