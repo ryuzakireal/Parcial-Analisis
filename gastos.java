@@ -45,3 +45,16 @@ public class Maingastos {
         control.mostrargastos();
     }
 }
+
+    
+public void calcularTotalGastos() {
+    ArrayList<Double> gastos = new ArrayList<>();
+    double totalGastos = 0; 
+    for (double gastosRealizados : gastos) {
+        totalGastos += gastosRealizados;
+    }
+}
+
+
+
+
