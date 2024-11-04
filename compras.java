@@ -74,7 +74,7 @@ public void cargarDesdeArchivo(String nombreArchivo) {
     } catch (IOException e) {
         System.out.println("Error al leer el archivo: " + e.getMessage());
     } catch (NumberFormatException e) {
-        System.out.println("Error al formatear la cantidad: " + e.getMessage());
+        System.out.println("Error al formatear la cantidad: "+e.getMessage());
     }
 }
 }
