@@ -28,6 +28,16 @@ class Articulo {
 	public String toString() {
 		return nombre + " (Cantidad: " + cantidad + ")";
 	}
+
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setCantidad(int nuevaCantidad) {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
 class listaCompras {
@@ -44,7 +54,18 @@ class listaCompras {
 			}
 		}
 	}
-
+	
+	public void editarArticulo(String nombre, int nuevaCantidad) {
+	     for (Articulo articulo : listaCompras) {
+	         if (articulo.getNombre().equalsIgnoreCase(nombre)) {
+	             articulo.setCantidad(nuevaCantidad);
+	             System.out.println("Articulo actualizado: " + articulo);
+	             return;
+	         }
+	     }
+	     System.out.println("Articulo no encontrado: " + nombre);
+	 }
+	
 	public void agregarArticulo(String nombre, int cantidad) {
 		Articulo nuevoArticulo = new Articulo(nombre, cantidad);
 		listaCompras.add(nuevoArticulo);
