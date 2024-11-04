@@ -5,7 +5,6 @@ class informacionDiarioContenido {
     private String contenido;
 
     public informacionDiarioContenido(String contenido) {
-
         this.contenido = contenido;
     }
 
@@ -50,6 +49,25 @@ class diarioPersonal {
             for (informacionDiarioContenido entradaContenidos : diarioContenido) {
                 System.out.println("- " + entradaContenidos);
             }
+        for (informacionDiarioFecha entradaPorFecha : diarioFecha) {
+            for (informacionDiarioContenido entradaPorContenido : diarioContenido) {
+                System.out.println("- " + entradaPorFecha + entradaPorContenido);
+            }
+        for (informacionDiarioFecha entrada : diarioFecha) {
+            System.out.println("- " + entrada);
+        }
+    }
+
+    public void mostrarUltimasEntradas(int cantidad) {
+        System.out.println("Ultimas " + cantidad + " entradas:");
+        int inicio = Math.max(diario.size() - cantidad, 0);
+
+        for (int i = diario.size() - 1; i >= inicio; i--) {
+
+        for (int i = diario.size() - 1; i >= inicio; i--) { 
+
+            System.out.println("- " + diario.get(i));
+
         }
     }
 }
@@ -59,6 +77,9 @@ public class diario {
         diarioPersonal diario = new diarioPersonal();
         diario.agregarEntradaFecha("2024-10-31");
         diario.agregarEntradaContenido("Estudie programacion en Java.");
+
+        diario.agregarEntradaContenido("Hoy fue un buen dia.");
+        diario.agregarEntradaFecha("2024-11-01");
         diario.mostrarDiario();
     }
 }
