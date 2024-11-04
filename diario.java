@@ -1,51 +1,64 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class informacionDiario {
-    private String fecha;
+class informacionDiarioContenido {
     private String contenido;
 
-    public informacionDiario(String fecha, String contenido) {
-        this.fecha = fecha;
+    public informacionDiarioContenido(String contenido) {
+
         this.contenido = contenido;
     }
 
     @Override
     public String toString() {
-        return fecha + ": " + contenido;
+        return contenido;
+    }
+}
+
+class informacionDiarioFecha {
+    private String fecha;
+
+    public informacionDiarioFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    @Override
+    public String toString() {
+        return fecha;
     }
 }
 
 class diarioPersonal {
-    private List<informacionDiario> diario = new ArrayList<>();
+    private List<informacionDiarioContenido> diarioContenido = new ArrayList<>();
+    private List<informacionDiarioFecha> diarioFecha = new ArrayList<>();
 
-    public void agregarEntrada(String fecha, String contenido) {
-        informacionDiario nuevaEntrada = new informacionDiario(fecha, contenido);
-        diario.add(nuevaEntrada);
+    public void agregarEntradaContenido(String contenido) {
+        informacionDiarioContenido nuevaEntrada = new informacionDiarioContenido(contenido);
+        diarioContenido.add(nuevaEntrada);
+        System.out.println("Entrada agregada: " + nuevaEntrada);
+    }
+
+    public void agregarEntradaFecha(String fecha) {
+        informacionDiarioFecha nuevaEntrada = new informacionDiarioFecha(fecha);
+        diarioFecha.add(nuevaEntrada);
         System.out.println("Entrada agregada: " + nuevaEntrada);
     }
 
     public void mostrarDiario() {
         System.out.println("Entradas del Diario:");
-        for (informacionDiario entrada : diario) {
-            System.out.println("- " + entrada);
-        }
-    }
-
-    public void mostrarUltimasEntradas(int cantidad) {
-        System.out.println("Ultimas " + cantidad + " entradas:");
-        int inicio = Math.max(diario.size() - cantidad, 0);
-        for (int i = diario.size() - 1; i >= inicio; i--) { 
-            System.out.println("- " + diario.get(i));
+        for (informacionDiarioFecha entradaFechas : diarioFecha) {
+            for (informacionDiarioContenido entradaContenidos : diarioContenido) {
+                System.out.println("- " + entradaContenidos);
+            }
         }
     }
 }
 
-public class MainDiario {
+public class diario {
     public static void main(String[] args) {
         diarioPersonal diario = new diarioPersonal();
-        diario.agregarEntrada("2024-10-31", "Hoy fue un buen dia.");
-        diario.agregarEntrada("2024-11-01", "Estudie programacion en Java.");
+        diario.agregarEntradaFecha("2024-10-31");
+        diario.agregarEntradaContenido("Estudie programacion en Java.");
         diario.mostrarDiario();
     }
 }
