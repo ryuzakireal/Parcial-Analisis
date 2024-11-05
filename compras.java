@@ -103,7 +103,12 @@ public void cargarDesdeArchivo(String nombreArchivo) {
 	public void ordenarArticulosAlfabeticamente ( List<Articulo> articulos){
 		Collections.sort(articulos);
 	}
-
+	
+	public void contarArticulos() {
+		int totalArticulos = listaCompras.size();
+		System.out.println("Número total de artículos: " + totalArticulos);
+		}
+		
 
 }
 
