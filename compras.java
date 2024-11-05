@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 class Articulo {
 	private String nombre;
@@ -78,7 +79,7 @@ class listaCompras {
 			System.out.println("- " + articulo);
 		}
 	}
-}
+
 
 public void cargarDesdeArchivo(String nombreArchivo) {
     try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
@@ -98,6 +99,12 @@ public void cargarDesdeArchivo(String nombreArchivo) {
         System.out.println("Error al formatear la cantidad: "+e.getMessage());
     }
 }
+
+	public void ordenarArticulosAlfabeticamente ( List<Articulo> articulos){
+		Collections.sort(articulos);
+	}
+
+
 }
 
 public class Main {
@@ -107,6 +114,7 @@ public static void main(String[] args) {
     lista.agregarArticulo("Pan", 1);
     lista.cargarDesdeArchivo("listaCompras.txt");
     lista.mostrarLista();
+	Articulo.ordenarArticulosAlfabeticamente(listaCompras);
 }
 }
 
