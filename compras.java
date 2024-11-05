@@ -108,8 +108,15 @@ public void cargarDesdeArchivo(String nombreArchivo) {
 		int totalArticulos = listaCompras.size();
 		System.out.println("Número total de artículos: " + totalArticulos);
 		}
-		
-
+		public Articulo buscarArticulos(String nombreArticulo){
+			for(Articulo art :  listaCompras){
+				String[] nombre = art.toString().split(" ");
+				if(nombre[0].equalsIgnoreCase(nombreArticulo)){
+					return art;
+			}
+		}
+		return null;
+	}
 }
 
 public class Main {

@@ -1,4 +1,5 @@
 # Parcial-Analisis
+# 5/11/24 Felipe Dumes se agrego el metodo "buscarArticulos" el cual  busca los articulos que se encuentren por medio del nombre
 # 5/11/24 Ilios Caballero se cambio el codigo para que ahora se muestre la cantidad total de articulos
 # 5/11/24 Santiago Prada, se cambio el codigo para que ahora se filtren los gastos por categoria
 # 5/11/24 Santiago Villamizar, se agrego/implemento el metodo "buscarporpalabraclave" el cual filtra los gastos por palabras clave
