@@ -118,7 +118,7 @@ public void cargarDesdeArchivo(String nombreArchivo) {
 		return null;
 	}
 
-public class compras {
+public class Main {
 public static void main(String[] args) {
     listaCompras lista = new listaCompras();
     lista.agregarArticulo("Manzanas", 4);
