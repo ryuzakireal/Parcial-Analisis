@@ -35,6 +35,17 @@ class controlGastos {
             System.out.println("- " + gasto);
         }
     }
+    
+    public ArrayList<gasto> buscarporpalabraclave(String palabra) {
+        ArrayList<gasto> gast = new ArrayList<>();
+        for(gasto gasto:listaDegastos) {
+            String[] gastosplit = gasto.toString().split(" - ");
+            if(gastosplit[0].contains(palabra)) {
+                gast.add(gasto);
+            }
+        }
+    return gast;
+    }
 }
 
 public class Maingastos {
