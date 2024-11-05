@@ -46,6 +46,17 @@ class controlGastos {
         }
     return gast;
     }
+    public ArrayList<gasto> gastosPorCategoria(String categoria){
+        ArrayList<gasto> gastosfiltrados = new ArrayList<>();
+        for(gasto gasto: listaDegastos) {
+            String[] tempString1 = gasto.toString().split("\\(");
+            String tempString2 = tempString1[1].split(",")[0].trim();
+            if(tempString2.equals(categoria)) {
+            	gastosfiltrados.add(gasto);
+            }
+        }
+        return gastosfiltrados;
+    }
 }
 
 public class Maingastos {
