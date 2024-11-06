@@ -210,11 +210,11 @@ class ControlDeGastos {
     }
 
     public void editarGasto(int id) {
-        Gasto gasto = buscarGastoPorId(id);
+        Gasto gasto = buscarGastoPorId(ID);
         if (gasto != null) {
             Scanner scanner = new Scanner(System.in);
 
-            System.out.println("Editando el gasto con ID: " + id);
+            System.out.println("Editando el gasto con ID: " + ID);
             gasto.mostrarGasto();
 
             System.out.print("Ingrese el nuevo monto (actual: $" + gasto.getMonto() + "): ");
