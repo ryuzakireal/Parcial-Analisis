@@ -246,7 +246,7 @@ class ControlDeGastos {
 
             System.out.print("Ingrese la nueva categoría (actual: " + gasto.getCategoria() + "): ");
             String nuevaCategoria = scanner.nextLine();
-            gasto.setCategoria(nuevaCategoria);
+            gasto.setCategoria(newCategoria);
 
             System.out.println("Gasto actualizado exitosamente.");
             gasto.mostrarGasto();
