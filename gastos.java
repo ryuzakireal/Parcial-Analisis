@@ -251,7 +251,7 @@ class ControlDeGastos {
             System.out.println("Gasto actualizado exitosamente.");
             gasto.mostrarGasto();
         } else {
-            System.out.println("No se encontró un gasto con el ID proporcionado.");
+            System.out.println("No se encontró gasto con el ID proporcionado.");
         }
     }
 }
