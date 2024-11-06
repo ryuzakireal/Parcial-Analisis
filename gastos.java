@@ -60,7 +60,7 @@ class controlGastos {
     }
     public void establecerPresupuesto(double nuevoPresupuesto) {
         if (nuevoPresupuesto >= 0) {
-            this.presupuestoMensual = nuevoPresupuesto;
+            this.presupuesto = nuevoPresupuesto;
             System.out.println("Presupuesto mensual actualizado a: $" + nuevoPresupuesto);
         } else {
             System.out.println("El presupuesto no puede ser negativo.");
