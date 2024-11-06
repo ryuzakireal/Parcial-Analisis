@@ -44,6 +44,12 @@ class Articulo {
 class listaCompras {
 	private List<Articulo> listaCompras = new ArrayList<>();
 
+	public void eliminarArticulos ( int indice) { 
+		if (indice >= 0 && indice < listaArticulos.size()) {
+			listaArticulos.remove(indice);
+		}
+    }
+	
 	public void filtrarArticulosComprados(String nombre) {
 		
 		for (Articulo articulo : listaCompras) {
