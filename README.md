@@ -18,3 +18,4 @@
 # 6/11/2024 Rafael Carbonell, se agrega el metodo filtrarArticulosPendientes , el cual permite obtener una lista de articulos que aun no han sido comprados
 # 6/11/24 Simon Perez se aggrego el metodo "Limpiar Diario" el cual Limpia todas las entradas del diario
 # 6/11/2024 Melissa Peterson, se agregó el método "eliminarGasto" el cual elimina un gasto de la lista.
+# 6/!1/2024 Santiago Sanabria , se agrega el metodo guardarGastosEnArchivo,  el cual permite guardar los gastos en un archivo
