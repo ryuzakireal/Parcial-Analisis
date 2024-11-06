@@ -12,3 +12,4 @@
 # 6/11/24 Nathalia Rojas, se agregó el método notificacionPresupuesto, el cual mantiene informado al usuario del presupuesto disponible
 # 6/11/24 Gabriel Sastoque, se agregó el método cargarGastosDesdeArchivo, el cual lee un archivo, crea instancias de gasto por cada línea y las agrega a listaDegastos.
 # 6/11/24 Edwin Pedraza, se agregó el método Buscar Entradas por palabras clave,el cual le permite al usuario buscar las palabras que necesita
+# 6/11/24 Andres Nuñez, se agregó el método contar entradas ,el cual cuenta el numero total de entradas realizadas y lo retorna
