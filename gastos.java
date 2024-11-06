@@ -209,7 +209,7 @@ class ControlDeGastos {
         return null;
     }
 
-    public void editarGasto(int id) {
+    public void editarGasto(int ID) {
         Gasto gasto = buscarGastoPorId(id);
         if (gasto != null) {
             Scanner scanner = new Scanner(System.in);
