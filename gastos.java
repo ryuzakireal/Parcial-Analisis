@@ -230,7 +230,7 @@ class ControlDeGastos {
             String nuevaCategoria = scanner.nextLine();
             gasto.setCategoria(nuevaCategoria);
 
-            System.out.println("Gasto actualizado exitosamente.");
+            System.out.println("Gasto actualizado exitosamente");
             gasto.mostrarGasto();
         } else {
             System.out.println("No se encontró un gasto con el ID proporcionado.");
