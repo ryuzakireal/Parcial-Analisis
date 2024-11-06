@@ -22,6 +22,7 @@ class gasto {
 
 class controlGastos {
     private List<gasto> listaDegastos = new ArrayList<>();
+    private double presupuesto;
 
     public void agregargasto(String descripcion, double monto, String categoria, String metodoPago) {
         gasto nuevogasto = new gasto(descripcion, monto, categoria, metodoPago);
@@ -56,6 +57,9 @@ class controlGastos {
             }
         }
         return gastosfiltrados;
+    }
+    public String notificacionPresupuesto(){
+        return "El presupuesto disponible es: " presupuesto;
     }
 }
 
