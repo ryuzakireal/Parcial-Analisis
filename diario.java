@@ -31,10 +31,12 @@ class diarioPersonal {
     private List<informacionDiarioContenido> diarioContenido = new ArrayList<>();
     private List<informacionDiarioFecha> diarioFecha = new ArrayList<>();
 
-    public int contarEntradas(){
-        return diarioContenido.size();
+    public int contarLasEntradas(){
+        int tamaño = diarioContenido.size() ;
+        System.out.println (tamaño) ;
+        return tamaño ;
     }
-    
+
     public void agregarEntradaContenido(String contenido) {
         informacionDiarioContenido nuevaEntrada = new informacionDiarioContenido(contenido);
         diarioContenido.add(nuevaEntrada);
