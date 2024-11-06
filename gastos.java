@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+//objeto
 class gasto {
     private String descripcion;
     private double monto;
@@ -25,7 +26,9 @@ class gasto {
     }
 }
 
+//métodos
 class controlGastos {
+	
     private List<gasto> listaDegastos = new ArrayList<>();
     private double presupuesto;
 
@@ -33,6 +36,9 @@ class controlGastos {
         gasto nuevogasto = new gasto(descripcion, monto, categoria, metodoPago);
         listaDegastos.add(nuevogasto);
         System.out.println("gasto agregado: " + nuevogasto);
+    }
+    public void eliminarGasto(gasto gasto){
+        listaDegastos.remove(gasto);
     }
 
     public void mostrargastos() {
@@ -50,7 +56,9 @@ class controlGastos {
                 gast.add(gasto);
             }
         }
+        
     return gast;
+    
     }
     public ArrayList<gasto> gastosPorCategoria(String categoria){
         ArrayList<gasto> gastosfiltrados = new ArrayList<>();
@@ -72,7 +80,10 @@ class controlGastos {
         }
     }
     public String notificacionPresupuesto(){
-        return "El presupuesto disponible es: " +  presupuesto;
+
+        return ("El presupuesto disponible es: " +presupuesto);
+
+
     }
     public void cargarGastosDesdeArchivo(String nombreArchivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
@@ -96,6 +107,7 @@ class controlGastos {
             System.out.println("Error en el formato numérico del monto: " + e.getMessage());
         }
     }
+<
     
     public void guardarGastosEnArchivo(String nombreArchivo) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
@@ -110,16 +122,19 @@ class controlGastos {
     }
 
 }
+    //imprime la lista de gastos
+    public void listarGastos (){
 
-public class Maingastos {
-    public static void main(String[] args) {
-        controlGastos control = new controlGastos();
-        control.agregargasto("Cena", 25.50, "Comida", "Tarjeta");
-        control.agregargasto("Transporte", 10.00, "Transporte", "Efectivo");
-        control.mostrargastos();
+
+        int numeral = 1;
+
+        for(gasto gasto: listaDegastos){
+            System.out.println(numeral+". "+gasto);
+            numeral++;
+        }
+
     }
-}
-
+    
     
 public void calcularTotalGastos() {
     ArrayList<Double> gastos = new ArrayList<>();
@@ -130,5 +145,14 @@ public void calcularTotalGastos() {
 }
 
 
+    public static void main(String[] args) {
+        controlGastos control = new controlGastos();
+        control.agregargasto("Cena", 25.50, "Comida", "Tarjeta");
+        control.agregargasto("Transporte", 10.00, "Transporte", "Efectivo");
+        control.listarGastos();
+
+
+    }
+}
 
 
