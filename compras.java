@@ -60,7 +60,8 @@ class listaCompras {
 				return;
 			}
 		}
-	}
+  }
+  
 	public List<Articulo> filtrarArticulosPendientes () { 
 		List<Articulo> listaDeArticulosPendientes = new List<>() ;
 		for( Articulo articulo : listaCompras ) {
