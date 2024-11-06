@@ -61,6 +61,16 @@ class listaCompras {
 			}
 		}
 	}
+
+	public List<Articulo> filtrarArticulosPendientes () { 
+		List<Articulo> listaDeArticulosPendientes = new List<>() ;
+		for( Articulo articulo : listaCompras ) {
+			if ( articulo.isComprado() != true ){ 
+				listaDeArticulosPendientes.add(articulo); 
+			}
+		}
+		return listaDeArticulosPendientes;
+	}
 	
 	public void editarArticulo(String nombre, int nuevaCantidad) {
 	     for (Articulo articulo : listaCompras) {
