@@ -17,3 +17,4 @@
 # 6/11/2024 Juanc Carlos Amaya, se agrego el metodo eliminar entradas, el cual permite eliminar un articulo acorde a su posicion dentro de la lista de articulos
 # 6/11/2024 Rafael Carbonell, se agrega el metodo filtrarArticulosPendientes , el cual permite obtener una lista de articulos que aun no han sido comprados
 # 6/11/24 Simon Perez se aggrego el metodo "Limpiar Diario" el cual Limpia todas las entradas del diario
+# 6/11/2024 Melissa Peterson, se agregó el método "eliminarGasto" el cual elimina un gasto de la lista.
