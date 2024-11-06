@@ -116,7 +116,6 @@ class controlGastos {
         }
 
     }
-    //
     
     
 public void calcularTotalGastos() {
