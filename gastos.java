@@ -70,7 +70,7 @@ class controlGastos {
         }
     }
     public String notificacionPresupuesto(){
-        return "El presupuesto disponible es: " presupuesto;
+        return "El presupuesto disponible es: " +  presupuesto;
     }
     public void cargarGastosDesdeArchivo(String nombreArchivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
