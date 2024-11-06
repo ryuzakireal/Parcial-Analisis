@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 class gasto {
     private String descripcion;
@@ -68,6 +71,28 @@ class controlGastos {
     }
     public String notificacionPresupuesto(){
         return "El presupuesto disponible es: " presupuesto;
+    }
+    public void cargarGastosDesdeArchivo(String nombreArchivo) {
+        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(";");
+                if (datos.length == 4) {
+                    String descripcion = datos[0];
+                    double monto = Double.parseDouble(datos[1]);
+                    String categoria = datos[2];
+                    String metodoPago = datos[3];
+
+                    agregargasto(descripcion, monto, categoria, metodoPago);
+                } else {
+                    System.out.println("Línea en formato incorrecto: " + linea);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Error en el formato numérico del monto: " + e.getMessage());
+        }
     }
 }
 
