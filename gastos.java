@@ -32,6 +32,9 @@ class controlGastos {
         listaDegastos.add(nuevogasto);
         System.out.println("gasto agregado: " + nuevogasto);
     }
+    public void eliminarGasto(gasto gasto){
+        listaDegastos.remove(gasto);
+    }
 
     public void mostrargastos() {
         System.out.println("Lista de gastos:");
