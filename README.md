@@ -1,4 +1,5 @@
 # Parcial-Analisis
+# 6/11/24 Julian Reyes se aggrego el metodo "presupuestoMensual" el cual establece o cambia el presupuesto mensual
 # 5/11/24 Felipe Dumes se agrego el metodo "buscarArticulos" el cual  busca los articulos que se encuentren por medio del nombre
 # 5/11/24 Ilios Caballero se cambio el codigo para que ahora se muestre la cantidad total de articulos
 # 5/11/24 Santiago Prada, se cambio el codigo para que ahora se filtren los gastos por categoria
