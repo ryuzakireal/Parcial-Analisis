@@ -31,6 +31,10 @@ class diarioPersonal {
     private List<informacionDiarioContenido> diarioContenido = new ArrayList<>();
     private List<informacionDiarioFecha> diarioFecha = new ArrayList<>();
 
+    public int contarEntradas(){
+        return diarioContenido.size();
+    }
+    
     public void agregarEntradaContenido(String contenido) {
         informacionDiarioContenido nuevaEntrada = new informacionDiarioContenido(contenido);
         diarioContenido.add(nuevaEntrada);
