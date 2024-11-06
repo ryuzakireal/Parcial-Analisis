@@ -121,3 +121,43 @@ public class Diario {
         entradas.clear();
         System.out.println("El diario ha sido limpiado. Todas las entradas han sido eliminadas.");
     }
+
+    class Entrada {
+    private String titulo;
+    private String contenido;
+    private String fecha;
+
+    public Entrada(String titulo, String contenido, String fecha) {
+        this.titulo = titulo;
+        this.contenido = contenido;
+        this.fecha = fecha;
+    }
+
+    public String toTexto() {
+        return "Fecha: " + fecha + "\nTítulo: " + titulo + "\nContenido: " + contenido + "\n";
+    }
+}
+
+class Diario {
+    private List<Entrada> entradas;
+
+    public Diario() {
+        this.entradas = new ArrayList<>();
+    }
+
+    public void agregarEntrada(Entrada entrada) {
+        entradas.add(entrada);
+    }
+
+    public void guardarEntradasEnArchivo(String nombreArchivo) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
+            for (Entrada entrada : entradas) {
+                writer.write(entrada.toTexto());
+                writer.write("\n-----------------------\n");
+            }
+            System.out.println("Entradas guardadas exitosamente en " + nombreArchivo);
+        } catch (IOException e) {
+            System.out.println("Error al guardar las entradas en el archivo: " + e.getMessage());
+        }
+    }
+}
