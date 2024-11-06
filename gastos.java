@@ -242,7 +242,7 @@ class ControlDeGastos {
             scanner.nextLine(); // Limpiar el buffer del scanner
             System.out.print("Ingrese la nueva descripción (actual: " + gasto.getDescripcion() + "): ");
             String nuevaDescripcion = scanner.nextLine();
-            gasto.setDescripcion(nuevaDescripcion);
+            gasto.setDescripcion(newDescripcion);
 
             System.out.print("Ingrese la nueva categoría (actual: " + gasto.getCategoria() + "): ");
             String nuevaCategoria = scanner.nextLine();
