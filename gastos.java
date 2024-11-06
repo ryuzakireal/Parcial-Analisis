@@ -22,6 +22,7 @@ class gasto {
 
 class controlGastos {
     private List<gasto> listaDegastos = new ArrayList<>();
+    private double presupuestoMensual;
 
     public void agregargasto(String descripcion, double monto, String categoria, String metodoPago) {
         gasto nuevogasto = new gasto(descripcion, monto, categoria, metodoPago);
@@ -56,6 +57,14 @@ class controlGastos {
             }
         }
         return gastosfiltrados;
+    }
+    public void establecerPresupuesto(double nuevoPresupuesto) {
+        if (nuevoPresupuesto >= 0) {
+            this.presupuestoMensual = nuevoPresupuesto;
+            System.out.println("Presupuesto mensual actualizado a: $" + nuevoPresupuesto);
+        } else {
+            System.out.println("El presupuesto no puede ser negativo.");
+        }
     }
 }
 
