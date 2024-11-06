@@ -137,4 +137,104 @@ public void calcularTotalGastos() {
     }
 }
 
+class Gasto {
+    private int id;
+    private double monto;
+    private String descripcion;
+    private String categoria;
+    private Date fecha;
+
+    public Gasto(int id, double monto, String descripcion, String categoria, Date fecha) {
+        this.id = id;
+        this.monto = monto;
+        this.descripcion = descripcion;
+        this.categoria = categoria;
+        this.fecha = fecha;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public double getMonto() {
+        return monto;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public void mostrarGasto() {
+        System.out.println("ID: " + id);
+        System.out.println("Monto: $" + monto);
+        System.out.println("Descripción: " + descripcion);
+        System.out.println("Categoría: " + categoria);
+        System.out.println("Fecha: " + fecha);
+    }
+}
+
+class ControlDeGastos {
+    private List<Gasto> gastos;
+
+    public ControlDeGastos() {
+        this.gastos = new ArrayList<>();
+    }
+
+    public void agregarGasto(Gasto gasto) {
+        gastos.add(gasto);
+    }
+
+    public Gasto buscarGastoPorId(int id) {
+        for (Gasto gasto : gastos) {
+            if (gasto.getId() == id) {
+                return gasto;
+            }
+        }
+        return null;
+    }
+
+    public void editarGasto(int id) {
+        Gasto gasto = buscarGastoPorId(id);
+        if (gasto != null) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Editando el gasto con ID: " + id);
+            gasto.mostrarGasto();
+
+            System.out.print("Ingrese el nuevo monto (actual: $" + gasto.getMonto() + "): ");
+            double nuevoMonto = scanner.nextDouble();
+            gasto.setMonto(nuevoMonto);
+
+            scanner.nextLine(); // Limpiar el buffer del scanner
+            System.out.print("Ingrese la nueva descripción (actual: " + gasto.getDescripcion() + "): ");
+            String nuevaDescripcion = scanner.nextLine();
+            gasto.setDescripcion(nuevaDescripcion);
+
+            System.out.print("Ingrese la nueva categoría (actual: " + gasto.getCategoria() + "): ");
+            String nuevaCategoria = scanner.nextLine();
+            gasto.setCategoria(nuevaCategoria);
+
+            System.out.println("Gasto actualizado exitosamente.");
+            gasto.mostrarGasto();
+        } else {
+            System.out.println("No se encontró un gasto con el ID proporcionado.");
+        }
+    }
+}
 
