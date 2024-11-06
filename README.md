@@ -13,3 +13,4 @@
 # 6/11/24 Gabriel Sastoque, se agregó el método cargarGastosDesdeArchivo, el cual lee un archivo, crea instancias de gasto por cada línea y las agrega a listaDegastos.
 # 6/11/24 Edwin Pedraza, se agregó el método Buscar Entradas por palabras clave,el cual le permite al usuario buscar las palabras que necesita
 # 6/11/24 Andres Nuñez, se agregó el método contar entradas ,el cual cuenta el numero total de entradas realizadas y lo retorna
+# 6/11/2024 Juanc Carlos Amaya, se agrego el metodo eliminar entradas, el cual permite eliminar un articulo acorde a su posicion dentro de la lista de articulos
