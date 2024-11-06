@@ -21,3 +21,4 @@
 # 6/!1/2024 Santiago Sanabria , se agrega el metodo guardarGastosEnArchivo,  el cual permite guardar los gastos en un archivo
 # 6/11/2024 Isabella Montoya, se agregó el método "GuardarEntradasEnUnArchivo" el cual Guarda Entradas de mi diario.
 # 6/11/2024 Jose Porras, se agregó el método "EditarGasto" el cual edita los gastos.
+# 6/11/2024 Jose Porras, se agregó el método "Marcar ArtículoComoComprado" el cual marca el artículo como comprado.
