@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 //objeto
@@ -105,8 +107,24 @@ class controlGastos {
             System.out.println("Error en el formato numérico del monto: " + e.getMessage());
         }
     }
+<
+    
+    public void guardarGastosEnArchivo(String nombreArchivo) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
+            for (gasto g : listaDegastos) {
+                writer.write(g.toString());
+                writer.newLine();  
+            }
+            System.out.println("Gastos guardados exitosamente en el archivo: " + nombreArchivo);
+        } catch (IOException e) {
+            System.out.println("Error al guardar los gastos en el archivo: " + e.getMessage());
+        }
+    }
+
+}
     //imprime la lista de gastos
     public void listarGastos (){
+
 
         int numeral = 1;
 
