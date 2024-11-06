@@ -20,3 +20,4 @@
 # 6/11/2024 Melissa Peterson, se agregó el método "eliminarGasto" el cual elimina un gasto de la lista.
 # 6/!1/2024 Santiago Sanabria , se agrega el metodo guardarGastosEnArchivo,  el cual permite guardar los gastos en un archivo
 # 6/11/2024 Isabella Montoya, se agregó el método "GuardarEntradasEnUnArchivo" el cual Guarda Entradas de mi diario.
+# 6/11/2024 Jose Porras, se agregó el método "EditarGasto" el cual edita los gastos.
