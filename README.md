@@ -9,3 +9,4 @@
 # 3/11/24 JeremyOrtiz se cambia el codigo para que ahora de agrege la fecha de las entradas y su contenido de una manera individual
 # 5/11/24 Cristian Chaparro se agrega el metodo de ordenar articulos alfabeticamente
 # primero mostrando el mes y despues el contenido 
+# 6/11/24 Nathalia Rojas, se agregó el método notificacionPresupuesto, el cual mantiene informado al usuario del presupuesto disponible
