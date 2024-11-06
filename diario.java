@@ -91,6 +91,20 @@ class diarioPersonal {
             System.out.println("No se encontraron entradas con la palabra clave.");
         }
     }
+    public void cargarEntradasDesdeArchivo(String nombreArchivo) {
+        try (BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo))) {
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                agregarEntradaFecha(linea.trim());
+                if ((linea = lector.readLine()) != null) {
+                    agregarEntradaContenido(linea.trim());
+                }
+            }
+            System.out.println("Entradas cargadas desde el archivo.");
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo: " + e.getMessage());
+        }
+    }
 }
 
 public class diario {
