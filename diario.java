@@ -103,3 +103,19 @@ public class diario {
         diario.mostrarDiario();
     }
 }
+
+public class Diario {
+    private List<String> entradas;
+    
+    public Diario() {
+        this.entradas = new ArrayList<>();
+    }
+
+    public void agregarEntrada(String entrada) {
+        entradas.add(entrada);
+    }
+
+    public void limpiarDiario() {
+        entradas.clear();
+        System.out.println("El diario ha sido limpiado. Todas las entradas han sido eliminadas.");
+    }
