@@ -44,9 +44,12 @@ class Articulo {
 class listaCompras {
 	private List<Articulo> listaCompras = new ArrayList<>();
 
-	public void eliminarArticulos ( int indice) { 
-		if (indice >= 0 && indice < listaArticulos.size()) {
-			listaArticulos.remove(indice);
+	public void eliminarArticulos ( int index) { 
+		if (index >= 0 && index < listaCompras.size()) {
+			listaCompras.remove(index);
+		}
+		else{ 
+			System.out.println("Error: índice fuera de rango, artículo no encontrado.");
 		}
     }
 	
