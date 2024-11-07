@@ -206,7 +206,53 @@ class Gasto {
         System.out.println("Fecha: " + fecha);
     }
 }
+ // Método para limpiar todos los gastos
+    public void limpiarGastos() {
+        if (listaDegastos.isEmpty()) {
+            System.out.println("No hay gastos para limpiar.");
+            return;
+        }
 
+        // Confirmación del usuario
+        System.out.print("¿Está seguro de que desea limpiar todos los gastos? (S/N): ");
+        Scanner scanner = new Scanner(System.in);
+        String confirmacion = scanner.nextLine();
+
+        if (confirmacion.equalsIgnoreCase("S")) {
+            listaDegastos.clear();
+            System.out.println("Todos los gastos han sido eliminados.");
+        } else {
+            System.out.println("Operación de limpieza de gastos cancelada.");
+        }
+    }
+
+    // Imprime la lista de gastos
+    public void listarGastos() {
+        int numeral = 1;
+        for(gasto gasto: listaDegastos){
+            System.out.println(numeral + ". " + gasto);
+            numeral++;
+        }
+    }
+
+    // Método para calcular el total de los gastos (corrección de implementación anterior)
+    public void calcularTotalGastos() {
+        double totalGastos = 0;
+        for (gasto g : listaDegastos) {
+            totalGastos += g.monto;
+        }
+        System.out.println("Total de gastos: $" + totalGastos);
+    }
+
+    public static void main(String[] args) {
+        controlGastos control = new controlGastos();
+        control.agregargasto("Cena", 25.50, "Comida", "Tarjeta");
+        control.agregargasto("Transporte", 10.00, "Transporte", "Efectivo");
+        control.listarGastos();
+        
+        // Limpiar gastos
+        control.limpiarGastos(); // Aquí se puede probar la funcionalidad de limpiar gastos
+    }
 class ControlDeGastos {
     private List<Gasto> gastos;
 
