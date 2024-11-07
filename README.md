@@ -1,4 +1,5 @@
 # Parcial-Analisis
+# 6/11/24 Andres Medina, se agrego el metodo "verEntradasPorEtiqueta", el cual muestra las entradas por etiqueta en la consola
 # 6/11/24 Dalyalí Porras agregó el metodo "listarGastos" el cual imprime la lista de gastos en consola, y un archivo de pruebas
 # 6/11/24 Julian Reyes se aggrego el metodo "presupuestoMensual" el cual establece o cambia el presupuesto mensual
 # 5/11/24 Felipe Dumes se agrego el metodo "buscarArticulos" el cual  busca los articulos que se encuentren por medio del nombre
@@ -23,3 +24,4 @@
 # 6/11/2024 Jose Porras, se agregó el método "EditarGasto" el cual edita los gastos.
 # 6/11/2024 Thomas Angulo, se agregó el método "Marcar ArtículoComoComprado" el cual marca el artículo como comprado.
 # 6/11/2024 Leonel Villamizar, se agregó el metodo "LimpiarGastos" 
+# 6/11/2024 Santiago Figueroa, se agregó el método "LimpiarLista" el cual Limpia toda la lista.

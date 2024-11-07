@@ -3,9 +3,13 @@ import java.util.List;
 
 class informacionDiarioContenido {
     private String contenido;
+    private ArrayList<String> Etiquetas;
 
     public informacionDiarioContenido(String contenido) {
         this.contenido = contenido;
+    }
+    public ArrayList<String> getEtiquetas() {
+        return Etiquetas;
     }
 
     @Override
@@ -89,6 +93,13 @@ class diarioPersonal {
 
         if (!encontrado) {
             System.out.println("No se encontraron entradas con la palabra clave.");
+        }
+    }
+    public void verEntradasPorEtiqueta(String etiqueta){
+        for(informacionDiarioContenido entrada: diarioContenido){
+            if(entrada.getEtiquetas().contains(etiqueta)){
+                System.out.println("- " + entrada.toString());
+            }
         }
     }
 }
