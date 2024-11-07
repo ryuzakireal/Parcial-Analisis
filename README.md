@@ -23,4 +23,5 @@
 # 6/11/2024 Isabella Montoya, se agregó el método "GuardarEntradasEnUnArchivo" el cual Guarda Entradas de mi diario.
 # 6/11/2024 Jose Porras, se agregó el método "EditarGasto" el cual edita los gastos.
 # 6/11/2024 Thomas Angulo, se agregó el método "Marcar ArtículoComoComprado" el cual marca el artículo como comprado.
+# 6/11/2024 Leonel Villamizar, se agregó el metodo "LimpiarGastos" 
 # 6/11/2024 Santiago Figueroa, se agregó el método "LimpiarLista" el cual Limpia toda la lista.
